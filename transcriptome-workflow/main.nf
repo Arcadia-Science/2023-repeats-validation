@@ -39,9 +39,23 @@ sra_genome_mapping_pairs = sample_csv.map { [ it.SRA_run_accession, it.genome_re
 refseq_genomes = sample_csv.map { [ it.genome_refseq_accession, it.genome_ftp_path ]}
 
 workflow {
-    
+
 }
 // download using SRA tools passing the SRA run accession
+process download_SRA_runs {
+    // download each SRA run with SRAtools
+    tag "${SRA_run_accession}_download"
+    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.gz"
+
+    input:
+    val(SRA_run_accession)
+
+    output:
+    path("*.gz"), emit: fastq
+
+    script:
+
+}
 
 
 
