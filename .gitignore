@@ -1,5 +1,7 @@
+metadata/2023*
 results/
 .DS_Store
 .RData
 .Rhistory
 *.Rproj*
+.Rproj.user
