@@ -1,5 +1,5 @@
 ﻿species_name,SRA_run_accession,library_layout,tissue,genome_refseq_accession,genome_ftp_path
-Bengalese_finch,SRR5223628,PAIRED,forebrain,GCF_005870125.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/005/870/125/GCF_005870125.1_lonStrDom2
-Bengalese_finch,SRR9295870,SINGLE,forebrain,GCF_005870125.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/005/870/125/GCF_005870125.1_lonStrDom2
-golden_hamster,SRR19329796,PAIRED,brain,GCF_017639785.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/639/785/GCF_017639785.1_BCM_Maur_2.0
-golden_hamster,SRR19206972,SINGLE,trigeminal ganglia,GCF_017639785.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/639/785/GCF_017639785.1_BCM_Maur_2.0
+Bengalese_finch,SRR5223628,PAIRED,forebrain,GCF_005870125.1_lonStrDom2,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/005/870/125/GCF_005870125.1_lonStrDom2
+Bengalese_finch,SRR9295870,SINGLE,forebrain,GCF_005870125.1_lonStrDom2,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/005/870/125/GCF_005870125.1_lonStrDom2
+golden_hamster,SRR19329796,PAIRED,brain,GCF_017639785.1_BCM_Maur_2.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/639/785/GCF_017639785.1_BCM_Maur_2.0
+golden_hamster,SRR19206972,SINGLE,trigeminal ganglia,GCF_017639785.1_BCM_Maur_2.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/017/639/785/GCF_017639785.1_BCM_Maur_2.0

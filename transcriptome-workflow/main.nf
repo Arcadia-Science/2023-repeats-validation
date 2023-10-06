@@ -5,17 +5,22 @@
 // Assess the expression of repeat-expansion homologs identified in the species through protein sequence and structural comparison methods
 // test with bengalese finch example and then process all ~3000 runs and ~145 species
 
+// IMPORTANT: SRA-tools (fasterq-dump) must be installed locally in your path, the conda installation does not work
+
 nextflow.enable.dsl=2
 
 params.threads=10
 params.outdir=null
 
 log.info """\
-DOWNLOAD, MAP, AND PROCESS TRANSCRIPTOMES AGAINST SPECIES TO QUANTIFY EXPRESSION OF SELECT GENES
+
+DOWNLOAD, MAP, AND PROCESS TRANSCRIPTOMES AGAINST SPECIES GENOMES
+TO QUANTIFY EXPRESSION OF SELECT GENES
 =========================================
 samples            : $params.samples
 proteins           : $params.proteins
 outdir             : $params.outdir
+threads            : $params.threads
 """
 
 // channels for the CSV of samples for SRA accessions and genome Refseq FTP links to download, mapping queries
@@ -39,27 +44,68 @@ sra_genome_mapping_pairs = sample_csv.map { [ it.SRA_run_accession, it.genome_re
 refseq_genomes = sample_csv.map { [ it.genome_refseq_accession, it.genome_ftp_path ]}
 
 workflow {
+    downloaded_paired_end_reads = download_paired_SRA_runs(paired_end_samples)
+    downloaded_single_end_reads = download_single_SRA_runs(single_end_samples)
+
+    downloaded_refseq_genomes = download_refseq_files(refseq_genomes)
 
 }
 // download using SRA tools passing the SRA run accession
-process download_SRA_runs {
+// paired-end reads process to split files
+process download_paired_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.gz"
+    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq"
 
     input:
     val(SRA_run_accession)
 
     output:
-    path("*.gz"), emit: fastq
+    path("*.fastq"), emit: fastq
 
     script:
-
+    """
+    fastq-dump --gzip --split-3 ${SRA_run_accession}
+    """
 }
 
+// download using SRA tools passing the SRA run accession
+// single-end reads
+process download_single_SRA_runs {
+    // download each SRA run with SRAtools
+    tag "${SRA_run_accession}_download"
+    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq"
 
+    input:
+    val(SRA_run_accession)
 
-// download the Refseq genome assembly and the GTF file by grabbing the FTP link
+    output:
+    path("*.fastq"), emit: fastq
+
+    script:
+    """
+    fastq-dump --gzip ${SRA_run_accession}
+    """
+}
+
+// download the Refseq genome assembly and the GTF file by combining FTP link with Refseq accession
+process download_refseq_files {
+    tag "${genome_refseq_accession}_download"
+    publishDir "${params.outdir}/refseq_assemblies", mode: 'copy', pattern: "*.gtf.gz"
+
+    input:
+    tuple val(genome_refseq_accession), val(genome_ftp_path)
+
+    output:
+    path("*.gtf.gz"), emit: gtf
+    // path("*.fna.gz"), emit: fasta
+
+    script:
+    """
+    wget ${genome_ftp_path}/${genome_refseq_accession}_genomic.gtf.gz
+    """
+
+}
 
 
 // trim/QC reads trimmomatic

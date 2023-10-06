@@ -81,7 +81,8 @@ brain_muscle_tissues <- sra_brain_muscle_accessions  %>%
 
 # refseq assembly info from NCBI FTP site
 refseq_assembly_info <- read_tsv("metadata/2023-10-05-assembly-summaries-refseq.tsv")  %>%
-  select(refseq.accession, species_taxid, genome_size, scaffold_count, ftp_path)
+  select(refseq.accession, species_taxid, genome_size, scaffold_count, ftp_path)  %>%
+  mutate(refseq_full_accession = str_extract(ftp_path, "(?<=\\/)[^\\/]+$"))
 
 # join with the SRA table to get the FTP information
 sra_brain_muscle_refseq_table <- left_join(sra_brain_muscle_accessions, refseq_assembly_info)
@@ -124,10 +125,10 @@ proteins_brain_muscle_species_table  %>%
 ###########################################
 
 sra_refseq_download_table <- sra_brain_muscle_refseq_table  %>%
-  select(species_clean, run_accession, library_layout, tissue_modf, refseq.accession, ftp_path)  %>%
+  select(species_clean, run_accession, library_layout, tissue_modf, refseq_full_accession, ftp_path)  %>%
   mutate(species_name = species_clean)  %>%
   mutate(tissue = tissue_modf)  %>%
-  mutate(genome_refseq_accession = refseq.accession)  %>%
+  mutate(genome_refseq_accession = refseq_full_accession)  %>%
   mutate(genome_ftp_path = ftp_path)  %>%
   mutate(SRA_run_accession = run_accession)  %>%
   select(species_name, SRA_run_accession, library_layout, tissue, genome_refseq_accession, genome_ftp_path)
