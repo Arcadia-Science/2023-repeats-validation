@@ -42,6 +42,7 @@ sra_genome_mapping_pairs = sample_csv.map { [ it.SRA_run_accession, it.genome_re
 
 // channel linking genome refseq accession to FTP download path
 refseq_genomes = sample_csv.map { [ it.genome_refseq_accession, it.genome_ftp_path ]}
+    .unique() //deduplicate because samplesheet is set up for mapping pairs
 
 workflow {
     downloaded_paired_end_reads = download_paired_SRA_runs(paired_end_samples)
@@ -55,13 +56,13 @@ workflow {
 process download_paired_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq"
+    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
     input:
     val(SRA_run_accession)
 
     output:
-    path("*.fastq"), emit: fastq
+    path("*.fastq.gz"), emit: fastq
 
     script:
     """
@@ -74,13 +75,13 @@ process download_paired_SRA_runs {
 process download_single_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq"
+    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
     input:
     val(SRA_run_accession)
 
     output:
-    path("*.fastq"), emit: fastq
+    path("*.fastq.gz"), emit: fastq
 
     script:
     """
@@ -103,24 +104,13 @@ process download_refseq_files {
     script:
     """
     wget ${genome_ftp_path}/${genome_refseq_accession}_genomic.gtf.gz
+    wget
     """
 
 }
 
-
-// trim/QC reads trimmomatic
-
-
 // map with HISAT2 either single-end with -U or paired-end with 1,2
 
 
-// quantify with package
-
-
-// select out proteins in the list for each genome
-// python/R scripts
-
-// binarize expression if 0=0, if greater than 0 then = 1 for just "expressed" in that tissue sample
-
-// plot by species/tissue/gene binarized expression
-//python/R scripts
+// quantify with featurecounts (R subread)
+// R scripts filtering
