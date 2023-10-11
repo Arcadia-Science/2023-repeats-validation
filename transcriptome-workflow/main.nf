@@ -34,10 +34,11 @@ sample_csv = Channel.fromPath(params.samples)
 proteins_csv = Channel.fromPath(params.proteins)
 
 // split SRA accessions based on if library_layout is SINGLE or PAIRED
+// add the corresponding refseq_accession so carries through as a tuple
 paired_end_samples = sample_csv.filter { it.library_layout == "PAIRED" }.map { it.SRA_run_accession }
 single_end_samples = sample_csv.filter { it.library_layout == "SINGLE" }.map { it.SRA_run_accession }
 
-// channel linking each SRA run accesssion to the corresponding genome to map to
+// channel linking each SRA run accesssion to the corresponding genome to map to, this will be combined later
 sra_genome_mapping_pairs = sample_csv.map { [ it.SRA_run_accession, it.genome_refseq_accession ] }
 
 // channel linking genome refseq accession to FTP download path
@@ -45,10 +46,25 @@ refseq_genomes = sample_csv.map { [ it.genome_refseq_accession, it.genome_ftp_pa
     .unique() //deduplicate because samplesheet is set up for mapping pairs
 
 workflow {
+    // download SRA files
     downloaded_paired_end_reads = download_paired_SRA_runs(paired_end_samples)
     downloaded_single_end_reads = download_single_SRA_runs(single_end_samples)
 
+    // download Refseq files
     downloaded_refseq_genomes = download_refseq_files(refseq_genomes)
+
+    // build HISAT2 index, include the GTF and FASTA for exons
+    // carry through the refseq genome accession as a tuple
+    genome_index = build_hisat2_index(downloaded_refseq_genomes.out.fasta)
+
+    // for paired-end channel, combine the downloaded paired end with original links
+    // then combine with the genome_index by the refseq_genome_accession joined
+    // structure is genome_refseq_accession, SRA_run_accession, downloaded_paired_end_reads, genome_index ?
+
+    // mapping jobs - link by the refseq genome accession tag assigned to both the SRA accession and the refseq files
+    // mapping_SRA_to_genome = sra_genome_mapping_pairs
+    //     .join(downloaded_refseq_genomes, by: 1)
+    // mapping_SRA_to_genome.view()
 
 }
 // download using SRA tools passing the SRA run accession
@@ -99,18 +115,21 @@ process download_refseq_files {
 
     output:
     path("*.gtf.gz"), emit: gtf
+    path("*.fna.gz"), emit: fasta
     // path("*.fna.gz"), emit: fasta
 
     script:
     """
     wget ${genome_ftp_path}/${genome_refseq_accession}_genomic.gtf.gz
-    wget
+    wget ${genome_ftp_path}/${genome_refseq_accession}_genomic.fna.gz
     """
 
 }
 
-// map with HISAT2 either single-end with -U or paired-end with 1,2
+// build HISAT2 index with the GTF file for exons
 
+// map with HISAT2 single-end with -U
 
-// quantify with featurecounts (R subread)
-// R scripts filtering
+// map paired with -1,2
+
+// quantify with featurecounts (R subread), filter by counts, filter out by select proteins
