@@ -1,11 +1,8 @@
 #! /usr/bin/env nextflow
 
 // Description
-// Download transcriptomic experiments and species genome/GTF files to map and quantify expression in select brain/muscle tissues from the SRA
+// Download RNAseq experiments from brain/muscle tissues and species genome/GTF files to map and quantify expression of genes
 // Assess the expression of repeat-expansion homologs identified in the species through protein sequence and structural comparison methods
-// test with bengalese finch example and then process all ~3000 runs and ~145 species
-
-// IMPORTANT: SRA-tools (fasterq-dump) must be installed locally in your path, the conda installation does not work
 
 nextflow.enable.dsl=2
 
@@ -35,11 +32,8 @@ proteins_csv = Channel.fromPath(params.proteins)
 
 // split SRA accessions based on if library_layout is SINGLE or PAIRED
 // add the corresponding refseq_accession so carries through as a tuple
-paired_end_samples = sample_csv.filter { it.library_layout == "PAIRED" }.map { it.SRA_run_accession }
-single_end_samples = sample_csv.filter { it.library_layout == "SINGLE" }.map { it.SRA_run_accession }
-
-// channel linking each SRA run accesssion to the corresponding genome to map to, this will be combined later
-sra_genome_mapping_pairs = sample_csv.map { [ it.SRA_run_accession, it.genome_refseq_accession ] }
+paired_end_samples = sample_csv.filter { it.library_layout == "PAIRED" }.map { [ it.genome_refseq_accession, it.SRA_run_accession ] }
+single_end_samples = sample_csv.filter { it.library_layout == "SINGLE" }.map { [ it.genome_refseq_accession, it.SRA_run_accession ] }
 
 // channel linking genome refseq accession to FTP download path
 refseq_genomes = sample_csv.map { [ it.genome_refseq_accession, it.genome_ftp_path ]}
@@ -58,16 +52,19 @@ workflow {
     // build STAR index, include the GTF and FASTA for exons
     // carry through the refseq genome accession as a tuple
     genome_index = build_star_index(downloaded_gtf, downloaded_fasta)
-    genome_index.view()
+
+    // prepare mapping channels with correct refseq accession : SRA accession pairings
+    mapping_single_samples = downloaded_single_end_reads
+        .join(genome_index, by: 0)
+
+    mapping_paired_samples = downloaded_paired_end_reads
+        .join(genome_index, by: 0)
+
+    mapped_single_BAMS = mapping_star(mapping_single_samples)
 
     // for paired-end channel, combine the downloaded paired end with original links
     // then combine with the genome_index by the refseq_genome_accession joined
     // structure is genome_refseq_accession, SRA_run_accession, downloaded_paired_end_reads, genome_index ?
-
-    // mapping jobs - link by the refseq genome accession tag assigned to both the SRA accession and the refseq files
-    // mapping_SRA_to_genome = sra_genome_mapping_pairs
-    //     .join(downloaded_refseq_genomes, by: 1)
-    // mapping_SRA_to_genome.view()
 
 }
 // download using SRA tools passing the SRA run accession
@@ -77,11 +74,13 @@ process download_paired_SRA_runs {
     tag "${SRA_run_accession}_download"
     publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
+    conda "envs/sratoolkit.yml"
+
     input:
-    val(SRA_run_accession)
+    tuple val(genome_refseq_accession), val(SRA_run_accession)
 
     output:
-    path("*.fastq.gz"), emit: fastq
+    tuple val(genome_refseq_accesion), val(SRA_run_accession), path("*.fastq.gz"), emit: fastq
 
     script:
     """
@@ -96,11 +95,13 @@ process download_single_SRA_runs {
     tag "${SRA_run_accession}_download"
     publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
+    conda "envs/sratoolkit.yml"
+
     input:
-    val(SRA_run_accession)
+    tuple val(genome_refseq_accession), val(SRA_run_accession)
 
     output:
-    path("*.fastq.gz"), emit: fastq
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.fastq.gz"), emit: fastq
 
     script:
     """
@@ -142,13 +143,13 @@ process build_star_index {
     path(genome_fasta)
 
     output:
-    tuple val(genome_refseq_accession), path("star"), emit: index
+    tuple val(genome_refseq_accession), path("*star"), emit: index
 
     script:
     """
     STAR --runThreadN ${params.threads} \\
         --runMode genomeGenerate \\
-        --genomeDir star/ \\
+        --genomeDir ${genome_refseq_accession}_star/ \\
         --genomeFastaFiles ${genome_fasta} \\
         --sjdbGTFfile ${genome_gtf} \\
         --sjdbGTFtagExonParentTranscript mRNA \\
@@ -157,10 +158,38 @@ process build_star_index {
 
 }
 
+// map with STAR
+process mapping_star {
+    tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping" // fix with name of SRA -vs- accession
+    // don't publish to output directory because will be giant
 
+    conda "envs/star.yml"
 
-// map with HISAT2 single-end with -U
+    input:
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
 
-// map paired with -1,2
+    output:
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), emit: mapping_file
+
+    script:
+    """
+    STAR --runThreadN ${params.threads} \\
+        --genomeDir ${index} \\
+        --readFilesIn ${reads} \\
+        --readFilesCommand zcat \\
+        --outFilterType BySJout \\
+        --outFilterMultimapNmax 20 --alignSJoverhangMin 8    \\
+         --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
+         --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
+         --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
+         --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
+         SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
+    """
+
+}
+
+// sort BAM files
+
+// quantify with htseq count
 
 // quantify with featurecounts (R subread), filter by counts, filter out by select proteins
