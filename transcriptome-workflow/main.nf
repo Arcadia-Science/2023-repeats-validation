@@ -9,7 +9,7 @@
 
 nextflow.enable.dsl=2
 
-params.threads=10
+params.threads=6
 params.outdir=null
 
 log.info """\
@@ -51,11 +51,14 @@ workflow {
     downloaded_single_end_reads = download_single_SRA_runs(single_end_samples)
 
     // download Refseq files
-    downloaded_refseq_genomes = download_refseq_files(refseq_genomes)
+    download_refseq_files(refseq_genomes)
+    downloaded_fasta = download_refseq_files.out.fasta
+    downloaded_gtf = download_refseq_files.out.gtf
 
-    // build HISAT2 index, include the GTF and FASTA for exons
+    // build STAR index, include the GTF and FASTA for exons
     // carry through the refseq genome accession as a tuple
-    genome_index = build_hisat2_index(downloaded_refseq_genomes.out.fasta)
+    genome_index = build_star_index(downloaded_gtf, downloaded_fasta)
+    genome_index.view()
 
     // for paired-end channel, combine the downloaded paired end with original links
     // then combine with the genome_index by the refseq_genome_accession joined
@@ -108,25 +111,53 @@ process download_single_SRA_runs {
 // download the Refseq genome assembly and the GTF file by combining FTP link with Refseq accession
 process download_refseq_files {
     tag "${genome_refseq_accession}_download"
-    publishDir "${params.outdir}/refseq_assemblies", mode: 'copy', pattern: "*.gtf.gz"
+    publishDir "${params.outdir}/refseq_assemblies", mode: 'copy', pattern: "*.gtf"
 
     input:
     tuple val(genome_refseq_accession), val(genome_ftp_path)
 
     output:
-    path("*.gtf.gz"), emit: gtf
-    path("*.fna.gz"), emit: fasta
-    // path("*.fna.gz"), emit: fasta
+    tuple val (genome_refseq_accession), path("*.gtf"), emit: gtf
+    path("*.fna"), emit: fasta
 
     script:
     """
     wget ${genome_ftp_path}/${genome_refseq_accession}_genomic.gtf.gz
     wget ${genome_ftp_path}/${genome_refseq_accession}_genomic.fna.gz
+
+    gunzip ${genome_refseq_accession}_genomic.gtf.gz
+    gunzip ${genome_refseq_accession}_genomic.fna
+    """
+}
+
+// build STAR index with GTF file
+process build_star_index {
+    tag "${genome_refseq_accession}_build_index"
+    publishDir "${params.outdir}/index", mode: 'copy', pattern:"*"
+
+    conda "envs/star.yml"
+
+    input:
+    tuple val(genome_refseq_accession), path(genome_gtf)
+    path(genome_fasta)
+
+    output:
+    tuple val(genome_refseq_accession), path("star"), emit: index
+
+    script:
+    """
+    STAR --runThreadN ${params.threads} \\
+        --runMode genomeGenerate \\
+        --genomeDir star/ \\
+        --genomeFastaFiles ${genome_fasta} \\
+        --sjdbGTFfile ${genome_gtf} \\
+        --sjdbGTFtagExonParentTranscript mRNA \\
+        --sjdbOverhang 99
     """
 
 }
 
-// build HISAT2 index with the GTF file for exons
+
 
 // map with HISAT2 single-end with -U
 
