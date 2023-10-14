@@ -54,13 +54,22 @@ workflow {
 
     // build STAR index, include the GTF and FASTA for exons
     // carry through the refseq genome accession as a tuple
-    genome_index = build_star_index(downloaded_gtf, downloaded_fasta)
+    reference_files = downloaded_fasta
+        .join(downloaded_gtf)
+    reference_files.view()
+    genome_index = build_star_index(reference_files)
 
     // prepare mapping channels with correct refseq accession : SRA accession pairings
     mapping_samples = combined_reads
         .combine(genome_index, by: 0)
 
     mapped_BAMS = star_mapping(mapping_samples)
+
+    // htseq count - combine mapped_BAMS with the corresponding genome GTF
+    htseq_input = mapped_BAMS
+        .combine(downloaded_gtf, by: 0)
+
+    htseq_input.view()
 
 }
 // download using SRA tools passing the SRA run accession
@@ -115,7 +124,7 @@ process download_refseq_files {
 
     output:
     tuple val (genome_refseq_accession), path("*.gtf"), emit: gtf
-    path("*.fna"), emit: fasta
+    tuple val (genome_refseq_accession), path("*.fna"), emit: fasta
 
     script:
     """
@@ -135,8 +144,7 @@ process build_star_index {
     conda "envs/star.yml"
 
     input:
-    tuple val(genome_refseq_accession), path(genome_gtf)
-    path(genome_fasta)
+    tuple val(genome_refseq_accession), path(genome_fasta), path(genome_gtf)
 
     output:
     tuple val(genome_refseq_accession), path("*star"), emit: index
@@ -157,7 +165,7 @@ process build_star_index {
 // map with STAR single end reads, index with samtools
 process star_mapping {
     tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping"
-
+    publishDir "${params.outdir}/mapping", mode: 'copy', pattern:"*"
 
     conda "envs/star_samtools.yml"
 
@@ -187,10 +195,20 @@ process star_mapping {
 
 // quantify with htseq count
 process htseq_count {
-    
+    tag "${genome_refseq_accession}-vs-${SRA_run_accession}_count"
+    publishDir "${params.outdir}/counts", mode: 'copy', pattern:"*"
+
+    conda "envs/htseq.yml"
+
+    input:
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path(bam_file), path(bai_file), path(genome_gtf)
+
+    output:
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.htseq"), emit: htseq_counts
+
+    script:
+    """
+    htseq-count -f bam ${bam_file} ${genome_gtf} -r pos > ${genome_refseq_accession}_vs_${SRA_run_accession}.htseq
+    """
+
 }
-// process htseq_count {
-
-// }
-
-// quantify with featurecounts (R subread), filter by counts, filter out by select proteins
