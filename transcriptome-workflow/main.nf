@@ -56,7 +56,6 @@ workflow {
     // carry through the refseq genome accession as a tuple
     reference_files = downloaded_fasta
         .join(downloaded_gtf)
-    reference_files.view()
     genome_index = build_star_index(reference_files)
 
     // prepare mapping channels with correct refseq accession : SRA accession pairings
@@ -69,7 +68,7 @@ workflow {
     htseq_input = mapped_BAMS
         .combine(downloaded_gtf, by: 0)
 
-    htseq_input.view()
+    htseq_counts = htseq_count(htseq_input)
 
 }
 // download using SRA tools passing the SRA run accession
