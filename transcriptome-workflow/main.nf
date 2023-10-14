@@ -60,7 +60,8 @@ workflow {
     mapping_paired_samples = downloaded_paired_end_reads
         .join(genome_index, by: 0)
 
-    mapped_single_BAMS = mapping_star(mapping_single_samples)
+    mapped_single_BAMS = mapping_single_star(mapping_single_samples)
+    mapped_paired_BAMS = mapping_paired_star(mapping_paired_samples)
 
     // for paired-end channel, combine the downloaded paired end with original links
     // then combine with the genome_index by the refseq_genome_accession joined
@@ -80,7 +81,7 @@ process download_paired_SRA_runs {
     tuple val(genome_refseq_accession), val(SRA_run_accession)
 
     output:
-    tuple val(genome_refseq_accesion), val(SRA_run_accession), path("*.fastq.gz"), emit: fastq
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.fastq.gz"), emit: fastq
 
     script:
     """
@@ -158,8 +159,38 @@ process build_star_index {
 
 }
 
+// map with STAR single end reads
+process mapping_single_star {
+    tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping" // fix with name of SRA -vs- accession
+    // don't publish to output directory because will be giant
+
+    conda "envs/star.yml"
+
+    input:
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
+
+    output:
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), emit: mapping_file
+
+    script:
+    """
+    STAR --runThreadN ${params.threads} \\
+        --genomeDir ${index} \\
+        --readFilesIn ${reads} \\
+        --readFilesCommand zcat \\
+        --outFilterType BySJout \\
+        --outFilterMultimapNmax 20 --alignSJoverhangMin 8    \\
+         --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
+         --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
+         --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
+         --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
+         SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
+    """
+
+}
+
 // map with STAR
-process mapping_star {
+process mapping_paired_star {
     tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping" // fix with name of SRA -vs- accession
     // don't publish to output directory because will be giant
 
