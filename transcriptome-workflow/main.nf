@@ -44,6 +44,9 @@ workflow {
     downloaded_paired_end_reads = download_paired_SRA_runs(paired_end_samples)
     downloaded_single_end_reads = download_single_SRA_runs(single_end_samples)
 
+    // combined downloaded reads
+    combined_reads = downloaded_paired_end_reads.concat(downloaded_single_end_reads)
+
     // download Refseq files
     download_refseq_files(refseq_genomes)
     downloaded_fasta = download_refseq_files.out.fasta
@@ -54,18 +57,10 @@ workflow {
     genome_index = build_star_index(downloaded_gtf, downloaded_fasta)
 
     // prepare mapping channels with correct refseq accession : SRA accession pairings
-    mapping_single_samples = downloaded_single_end_reads
-        .join(genome_index, by: 0)
+    mapping_samples = combined_reads
+        .combine(genome_index, by: 0)
 
-    mapping_paired_samples = downloaded_paired_end_reads
-        .join(genome_index, by: 0)
-
-    mapped_single_BAMS = mapping_single_star(mapping_single_samples)
-    mapped_paired_BAMS = mapping_paired_star(mapping_paired_samples)
-
-    // for paired-end channel, combine the downloaded paired end with original links
-    // then combine with the genome_index by the refseq_genome_accession joined
-    // structure is genome_refseq_accession, SRA_run_accession, downloaded_paired_end_reads, genome_index ?
+    mapped_BAMS = star_mapping(mapping_samples)
 
 }
 // download using SRA tools passing the SRA run accession
@@ -159,18 +154,18 @@ process build_star_index {
 
 }
 
-// map with STAR single end reads
-process mapping_single_star {
-    tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping" // fix with name of SRA -vs- accession
-    // don't publish to output directory because will be giant
+// map with STAR single end reads, index with samtools
+process star_mapping {
+    tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping"
 
-    conda "envs/star.yml"
+
+    conda "envs/star_samtools.yml"
 
     input:
     tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
 
     output:
-    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), emit: mapping_file
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*.bai"), emit: mapping_file
 
     script:
     """
@@ -185,42 +180,17 @@ process mapping_single_star {
          --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
          --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
          SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
-    """
 
+    samtools index ${genome_refseq_accession}_vs_${SRA_run_accession}Aligned.sortedByCoord.out.bam
+    """
 }
-
-// map with STAR
-process mapping_paired_star {
-    tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping" // fix with name of SRA -vs- accession
-    // don't publish to output directory because will be giant
-
-    conda "envs/star.yml"
-
-    input:
-    tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
-
-    output:
-    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), emit: mapping_file
-
-    script:
-    """
-    STAR --runThreadN ${params.threads} \\
-        --genomeDir ${index} \\
-        --readFilesIn ${reads} \\
-        --readFilesCommand zcat \\
-        --outFilterType BySJout \\
-        --outFilterMultimapNmax 20 --alignSJoverhangMin 8    \\
-         --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
-         --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
-         --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
-         --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
-         SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
-    """
-
-}
-
-// sort BAM files
 
 // quantify with htseq count
+process htseq_count {
+    
+}
+// process htseq_count {
+
+// }
 
 // quantify with featurecounts (R subread), filter by counts, filter out by select proteins
