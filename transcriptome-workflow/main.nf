@@ -78,6 +78,8 @@ process download_paired_SRA_runs {
     tag "${SRA_run_accession}_download"
     publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
+    errorStrategy 'ignore' // ignore failed downloads
+
     conda "envs/sratoolkit.yml"
 
     input:
@@ -98,6 +100,8 @@ process download_single_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
     publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
+
+    errorStrategy 'ignore' // ignore failed downloads
 
     conda "envs/sratoolkit.yml"
 
