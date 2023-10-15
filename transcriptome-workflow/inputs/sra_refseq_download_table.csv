@@ -915,10 +915,10 @@ dog,SRR22459467,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.n
 dog,SRR22459468,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459469,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459470,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457978,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457979,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457980,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457981,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457978,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457979,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457980,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457981,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459343,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459344,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459345,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
@@ -931,10 +931,10 @@ dog,SRR22459351,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.nc
 dog,SRR22459352,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459353,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459354,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458492,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458493,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458494,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458495,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458492,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458493,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458494,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458495,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459116,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459117,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22459118,PAIRED,hippocampus,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
@@ -956,30 +956,30 @@ dog,SRR3659924,SINGLE,brain,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm
 dog,SRR3659937,SINGLE,brain,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR3659965,SINGLE,brain,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR3659978,SINGLE,brain,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458589,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458590,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458591,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458592,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458593,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458594,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458595,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458596,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458597,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458598,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458599,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22458600,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458589,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458590,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458591,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458592,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458593,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458594,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458595,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458596,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458597,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458598,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458599,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22458600,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22458010,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22458011,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22458012,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22458013,PAIRED,cerebellum,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457747,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457748,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457749,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457750,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457751,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457752,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457753,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457754,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457747,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457748,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457749,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457750,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457751,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457752,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457753,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457754,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22457823,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22457824,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22457825,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
@@ -1004,26 +1004,26 @@ dog,SRR22456756,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.
 dog,SRR22456757,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22456758,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 dog,SRR22456759,PAIRED,frontal lobe,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457963,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457964,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457965,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457966,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457967,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457968,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457969,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457970,PAIRED,ganglia, spinal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457867,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457868,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457869,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457870,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457871,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457872,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457873,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457874,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457875,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457876,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457877,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
-dog,SRR22457878,PAIRED,muscle, skeletal,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457963,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457964,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457965,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457966,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457967,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457968,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457969,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457970,PAIRED,spinal_ganglia,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457867,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457868,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457869,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457870,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457871,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457872,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457873,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457874,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457875,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457876,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457877,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
+dog,SRR22457878,PAIRED,skeletal_muscle,GCF_011100685.1_UU_Cfam_GSD_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/685/GCF_011100685.1_UU_Cfam_GSD_1.0
 domestic_cat,SRR21657489,PAIRED,brain,GCF_018350175.1_F.catus_Fca126_mat1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/350/175/GCF_018350175.1_F.catus_Fca126_mat1.0
 domestic_cat,SRR21657490,PAIRED,brain,GCF_018350175.1_F.catus_Fca126_mat1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/350/175/GCF_018350175.1_F.catus_Fca126_mat1.0
 domestic_cat,SRR21657498,PAIRED,brain,GCF_018350175.1_F.catus_Fca126_mat1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/350/175/GCF_018350175.1_F.catus_Fca126_mat1.0
