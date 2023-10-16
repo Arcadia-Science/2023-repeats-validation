@@ -1,3 +1,7 @@
+transcriptome-workflow/work/
+transcriptome-workflow/test/
+.nextflow/
+*.log*
 metadata/2023*
 results/
 .DS_Store
