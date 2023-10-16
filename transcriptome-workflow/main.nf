@@ -6,9 +6,6 @@
 
 nextflow.enable.dsl=2
 
-params.threads=6
-params.outdir=null
-
 log.info """\
 
 DOWNLOAD, MAP, AND PROCESS TRANSCRIPTOMES AGAINST SPECIES GENOMES
