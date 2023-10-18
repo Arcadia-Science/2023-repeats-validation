@@ -14,7 +14,6 @@ DOWNLOAD, MAP, AND PROCESS TRANSCRIPTOMES AGAINST SPECIES GENOMES
 TO QUANTIFY EXPRESSION OF SELECT GENES
 =========================================
 samples            : $params.samples
-proteins           : $params.proteins
 outdir             : $params.outdir
 threads            : $params.threads
 """
@@ -27,7 +26,6 @@ threads            : $params.threads
 sample_csv = Channel.fromPath(params.samples)
     .splitCsv(header:true)
 
-proteins_csv = Channel.fromPath(params.proteins)
 
 // split SRA accessions based on if library_layout is SINGLE or PAIRED
 // add the corresponding refseq_accession so carries through as a tuple

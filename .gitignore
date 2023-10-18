@@ -1,3 +1,4 @@
+*.pid
 transcriptome-workflow/work/
 transcriptome-workflow/test/
 .nextflow/
