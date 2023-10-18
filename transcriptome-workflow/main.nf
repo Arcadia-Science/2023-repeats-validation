@@ -4,6 +4,8 @@
 // Download RNAseq experiments from brain/muscle tissues and species genome/GTF files to map and quantify expression of genes
 // Assess the expression of repeat-expansion homologs identified in the species through protein sequence and structural comparison methods
 
+
+// outputs the count table for each mapping job and the GTF file for each genome
 nextflow.enable.dsl=2
 
 log.info """\
@@ -73,7 +75,6 @@ workflow {
 process download_paired_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
     errorStrategy 'ignore' // ignore failed downloads
 
@@ -96,7 +97,6 @@ process download_paired_SRA_runs {
 process download_single_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
     errorStrategy 'ignore' // ignore failed downloads
 
@@ -157,7 +157,8 @@ process build_star_index {
         --genomeFastaFiles ${genome_fasta} \\
         --sjdbGTFfile ${genome_gtf} \\
         --sjdbGTFtagExonParentTranscript mRNA \\
-        --sjdbOverhang 99
+        --sjdbOverhang 99 \\
+        --limitGenomeGenerateRAM=130000000000
     """
 
 }
