@@ -211,3 +211,20 @@ process htseq_count {
     """
 
 }
+
+// parse GTF files to TSV with gene_id : protein_id
+process parse_gtf {
+    tag "${genome_refseq_accession}_gtf_parse"
+    publishDir "${params.outdir}/gtf_tables", mode: copy, pattern:"*.tsv"
+
+    input:
+    tuple val(genome_refseq_accession), path(gtf)
+
+    output:
+    path("*.tsv"), emit: gtf_table
+
+    script:
+    """
+    python3 ${baseDir}/bin/parse-gtf-files.py ${gtf} ${genome_refseq_accession}_gtf_table.tsv
+    """
+}
