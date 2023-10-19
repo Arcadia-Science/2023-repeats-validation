@@ -41,7 +41,7 @@ srainfo_species_rna <- srainfo_species_clean %>%
   filter(!is.na(run_total_bases))  %>%
   mutate(run_total_bases = as.numeric(run_total_bases))
 
-write.csv(srainfo_species_rna, "results/srainfo_species_rna_accesions.csv", quote=FALSE, row.names = FALSE)
+write.csv(srainfo_species_rna, "results/srainfo_species_rna_accessions.csv", quote=FALSE, row.names = FALSE)
 
 ###########################################
 # Metadata for genomes with Refseq accessions
@@ -68,11 +68,12 @@ all_tissues <- sra_genome_accessions  %>% group_by(tissue_modf)  %>% count()  %>
 sra_brain_muscle_accessions <- sra_genome_accessions  %>%
   filter(tissue_modf == "brain" | tissue_modf == "hippocampus" | tissue_modf == "spinal_cord" | tissue_modf == "hypothalamus" | tissue_modf == "skeletal muscle" | tissue_modf == "muscle" | tissue_modf == "cerebellum" | tissue_modf == "cortex" | tissue_modf == "dorsal root ganglion" | tissue_modf == "pituitary" | tissue_modf == "trigeminal ganglia" | tissue_modf == "prefrontal cortex" | tissue_modf == "dorsolateral prefrontal cortex" | tissue_modf == "brain tumor" | tissue_modf == "fetal brain" | tissue_modf == "midbrain" | tissue_modf == "brainstem" | tissue_modf == "brain (frontal cortex)" | tissue_modf == "cerebral cortex" | tissue_modf == "nucleus accumbens (brain)" | tissue_modf == "pituitary gland" | tissue_modf == "forebrain" | tissue_modf == "frontal lobe" | tissue_modf == "ganglia, spinal" | tissue_modf == "muscle, skeletal" | tissue_modf == "spinal cord" | tissue_modf == "brachial motor neurons" | tissue_modf == "brachial spinal cord")
 
-sra_brain_muscle_accessions  %>%
+species_accessions_counts <- sra_brain_muscle_accessions  %>%
   group_by(species_clean)  %>%
   count()  %>%
-  arrange(desc(n))  %>%
-  print(n=100)
+  arrange(desc(n))
+
+write.csv(species_accessions_counts, "results/species-accession-counts.csv", quote = FALSE, row.names = FALSE)
 
 brain_muscle_tissues <- sra_brain_muscle_accessions  %>%
   group_by(tissue_modf)  %>%
@@ -127,7 +128,7 @@ proteins_brain_muscle_species_table  %>%
 sra_refseq_download_table <- sra_brain_muscle_refseq_table  %>%
   select(species_clean, run_accession, library_layout, tissue_modf, refseq_full_accession, ftp_path)  %>%
   mutate(species_name = species_clean)  %>%
-  mutate(tissue = tissue_modf)  %>%
+  mutate(tissue = gsub(",", " ", tissue_modf))  %>%
   mutate(genome_refseq_accession = refseq_full_accession)  %>%
   mutate(genome_ftp_path = ftp_path)  %>%
   mutate(SRA_run_accession = run_accession)  %>%
@@ -144,3 +145,12 @@ refseq_proteins_table <- proteins_brain_muscle_species_table  %>%
 write.csv(sra_refseq_download_table, "transcriptome-workflow/inputs/sra_refseq_download_table.csv", row.names = FALSE, quote = FALSE)
 
 write.csv(refseq_proteins_table, "transcriptome-workflow/inputs/refseq_proteins_table.csv", row.names = FALSE, quote = FALSE)
+
+# species of interest
+# shrews, naked mole rat, little skate, koala
+filtered_species <- c("Tasmanian_devil", "koala", "Australian_echidna", "common_brushtail", "monito_del_monte", "gray_short-tailed_opossum", "little_skate", "naked_mole-rat", "European_shrew")
+
+sra_refseq_download_filtered <- sra_refseq_download_table %>% 
+  filter(species_name %in% filtered_species)
+
+write.csv(sra_refseq_download_filtered, "transcriptome-workflow/inputs/filtered_sra_refseq_download_table.csv", row.names = FALSE, quote = FALSE)

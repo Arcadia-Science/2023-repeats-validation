@@ -1,0 +1,260 @@
+species_name,SRA_run_accession,library_layout,tissue,genome_refseq_accession,genome_ftp_path
+Australian_echidna,SRR10530487,SINGLE,brain,GCF_015852505.1_mTacAcu1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/852/505/GCF_015852505.1_mTacAcu1.pri
+Australian_echidna,SRR10530491,SINGLE,cerebellum,GCF_015852505.1_mTacAcu1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/852/505/GCF_015852505.1_mTacAcu1.pri
+Australian_echidna,SRR10530493,SINGLE,brain,GCF_015852505.1_mTacAcu1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/852/505/GCF_015852505.1_mTacAcu1.pri
+common_brushtail,SRR22399366,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399368,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399375,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399378,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399381,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399385,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399388,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399473,SINGLE,muscle,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+common_brushtail,SRR22399479,SINGLE,brain,GCF_011100635.1_mTriVul1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/011/100/635/GCF_011100635.1_mTriVul1.pri
+European_shrew,SRR23712519,PAIRED,cortex,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712520,PAIRED,cortex,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712525,PAIRED,cortex,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712527,PAIRED,hypothalamus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712528,PAIRED,hypothalamus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712529,PAIRED,hypothalamus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712530,PAIRED,hypothalamus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712531,PAIRED,hippocampus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712532,PAIRED,hippocampus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712533,PAIRED,hippocampus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712534,PAIRED,hippocampus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712535,PAIRED,hippocampus,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712536,PAIRED,cortex,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+European_shrew,SRR23712537,PAIRED,cortex,GCF_027595985.1_mSorAra2.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/595/985/GCF_027595985.1_mSorAra2.pri
+gray_short-tailed_opossum,SRR10076632,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076633,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076634,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076635,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076636,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076637,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076638,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076639,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076640,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076641,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076642,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076643,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076644,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076655,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076658,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076659,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076660,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076661,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076662,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076663,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076664,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076665,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076666,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076667,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076668,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076670,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076671,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076672,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076673,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076645,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076646,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076647,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076648,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076649,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076650,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076651,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076652,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076653,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076654,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076656,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076657,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR10076669,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR6206924,PAIRED,skeletal muscle,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR6206899,PAIRED,brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR5412205,SINGLE,brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR5412206,SINGLE,brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165282,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165283,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165284,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165285,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165286,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165287,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR1165288,SINGLE,spinal cord,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR449433,PAIRED,brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR449434,PAIRED,brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776565,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776566,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776567,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776568,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776569,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776570,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776571,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776572,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776573,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776574,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776575,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776576,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776577,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776578,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776579,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776580,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776533,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776534,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776535,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776536,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776537,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776538,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776539,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776540,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776541,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776542,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776543,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776544,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776545,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776546,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776547,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR776548,SINGLE,fetal brain,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR13142094,PAIRED,cerebellum,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR13142095,PAIRED,cerebellum,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR13142096,PAIRED,cerebellum,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR13142097,PAIRED,cerebellum,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR13142098,PAIRED,cerebellum,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+gray_short-tailed_opossum,SRR13142099,PAIRED,cerebellum,GCF_027887165.1_mMonDom1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/027/887/165/GCF_027887165.1_mMonDom1.pri
+koala,SRR8708136,PAIRED,brain,GCF_002099425.1_phaCin_unsw_v4.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/099/425/GCF_002099425.1_phaCin_unsw_v4.1
+koala,SRR8708138,PAIRED,brain,GCF_002099425.1_phaCin_unsw_v4.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/099/425/GCF_002099425.1_phaCin_unsw_v4.1
+koala,SRR1205222,PAIRED,brain,GCF_002099425.1_phaCin_unsw_v4.1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/099/425/GCF_002099425.1_phaCin_unsw_v4.1
+little_skate,SRR18331516,PAIRED,brachial spinal cord,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR18331517,PAIRED,brachial spinal cord,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR18331518,PAIRED,brachial spinal cord,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR18331519,PAIRED,brachial spinal cord,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR15185978,PAIRED,brachial motor neurons,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR15185979,PAIRED,brachial motor neurons,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR15185980,PAIRED,brachial motor neurons,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR15185981,PAIRED,brachial motor neurons,GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
+little_skate,SRR6189921,PAIRED,spinal cord,GCF_028641065.1_Leri_hhj_1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/641/065/GCF_028641065.1_Leri_hhj_1
+little_skate,SRR6189922,PAIRED,spinal cord,GCF_028641065.1_Leri_hhj_1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/641/065/GCF_028641065.1_Leri_hhj_1
+little_skate,SRR6189923,PAIRED,spinal cord,GCF_028641065.1_Leri_hhj_1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/641/065/GCF_028641065.1_Leri_hhj_1
+little_skate,SRR6189924,PAIRED,spinal cord,GCF_028641065.1_Leri_hhj_1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/641/065/GCF_028641065.1_Leri_hhj_1
+little_skate,SRR6189925,PAIRED,spinal cord,GCF_028641065.1_Leri_hhj_1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/641/065/GCF_028641065.1_Leri_hhj_1
+little_skate,SRR6189926,PAIRED,spinal cord,GCF_028641065.1_Leri_hhj_1,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/028/641/065/GCF_028641065.1_Leri_hhj_1
+monito_del_monte,SRR6255595,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255596,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255597,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255598,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255599,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255600,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255601,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255602,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255603,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255604,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255605,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255606,PAIRED,muscle,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255607,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255608,PAIRED,brain,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255609,PAIRED,muscle,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255611,PAIRED,muscle,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+monito_del_monte,SRR6255612,PAIRED,muscle,GCF_019393635.1_mDroGli1.pri,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/019/393/635/GCF_019393635.1_mDroGli1.pri
+naked_mole-rat,SRR6003674,PAIRED,dorsal root ganglion,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR6003675,PAIRED,dorsal root ganglion,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR6003677,PAIRED,dorsal root ganglion,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR6003678,PAIRED,spinal cord,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR6003680,PAIRED,spinal cord,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR6003681,PAIRED,spinal cord,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517426,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517427,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517428,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517429,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517344,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517345,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517346,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517347,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517348,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517349,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517350,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517351,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517352,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517353,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517354,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517355,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517356,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517357,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517358,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517359,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517360,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517361,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517362,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517363,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517364,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517365,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517366,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517367,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517368,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517369,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517370,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517371,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517372,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517414,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517415,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517418,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517419,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517422,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517423,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517307,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517308,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517309,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517310,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517311,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517312,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517313,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517314,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517315,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517316,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517317,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517318,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517319,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517320,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517321,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517322,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517323,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517324,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517325,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517326,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517327,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517328,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517329,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517330,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517331,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517332,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517333,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517334,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517335,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517336,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517337,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517338,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517339,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517340,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517341,SINGLE,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517342,SINGLE,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR5517343,SINGLE,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959124,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959133,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959142,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959152,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959162,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959171,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959180,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR1959189,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR2123685,PAIRED,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR2123686,PAIRED,cerebellum,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR2120779,PAIRED,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR2120811,PAIRED,hypothalamus,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR2120823,PAIRED,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR2120824,PAIRED,pituitary,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR306400,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR306401,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR306402,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR306406,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR17216158,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR17216164,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR17216169,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR17216175,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+naked_mole-rat,SRR17216179,PAIRED,brain,GCF_000247695.1_HetGla_female_1.0,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/247/695/GCF_000247695.1_HetGla_female_1.0
+Tasmanian_devil,SRR034105,SINGLE,brain,GCF_902635505.1_mSarHar1.11,https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/635/505/GCF_902635505.1_mSarHar1.11
