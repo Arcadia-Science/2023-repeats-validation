@@ -67,6 +67,9 @@ workflow {
 
     htseq_counts = htseq_count(htseq_input)
 
+    // parse GTF files to simple tsv
+    gtf_tables = parse_gtf(downloaded_gtf)
+
 }
 // download using SRA tools passing the SRA run accession
 // paired-end reads process to split files
@@ -215,7 +218,7 @@ process htseq_count {
 // parse GTF files to TSV with gene_id : protein_id
 process parse_gtf {
     tag "${genome_refseq_accession}_gtf_parse"
-    publishDir "${params.outdir}/gtf_tables", mode: copy, pattern:"*.tsv"
+    publishDir "${params.outdir}/gtf_tables", mode: 'copy', pattern:"*.tsv"
 
     input:
     tuple val(genome_refseq_accession), path(gtf)

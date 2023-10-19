@@ -29,11 +29,11 @@ all_counts_table <- all_counts_table %>%
 sra_accessions <- read.csv("transcriptome-workflow/inputs/sra_refseq_download_table.csv")
 protein_accessions <- read.csv("transcriptome-workflow/inputs/refseq_proteins_table.csv")
 
-# join with the count information to add tissue metadata
+# join with the count information to add tissue metadata, filter for the proteins of interest
 counts_table_info <- left_join(all_counts_table, sra_accessions) %>% 
   select(genome_refseq_accession, SRA_run_accession, species_name, gene, count, tissue)
 
-# outlier removal prior to density plotting for each species
+# outlier removal prior to density plotting
 counts_table_info %>% 
   group_by(SRA_run_accession) %>% 
   mutate(IQR = IQR(count),
@@ -42,4 +42,4 @@ counts_table_info %>%
   filter(count >= (Q1 - 1.5 * IQR) & count <= (Q3 + 1.5 * IQR)) %>%
   filter(species_name == "Bengalese_finch") %>% 
   ggplot(aes(x=count)) +
-  stat_density(colour="black", fill=NA)
+  geom_density(adjust = 2)
