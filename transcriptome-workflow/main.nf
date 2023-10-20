@@ -159,7 +159,7 @@ process build_star_index {
         --sjdbGTFfile ${genome_gtf} \\
         --sjdbGTFtagExonParentTranscript mRNA \\
         --sjdbOverhang 99 \\
-        --limitGenomeGenerateRAM=130000000000
+        --limitGenomeGenerateRAM=60000000000
     """
 
 }
