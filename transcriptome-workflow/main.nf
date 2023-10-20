@@ -168,7 +168,6 @@ process build_star_index {
 // map with STAR single end reads, index with samtools
 process star_mapping {
     tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping"
-    publishDir "${params.outdir}/mapping", mode: 'copy', pattern:"*"
 
     conda "envs/star_samtools.yml"
 
