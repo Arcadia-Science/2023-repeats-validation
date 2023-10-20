@@ -43,3 +43,7 @@ counts_table_info %>%
   filter(species_name == "Bengalese_finch") %>% 
   ggplot(aes(x=count)) +
   geom_density(adjust = 2)
+
+counts_table_info %>% 
+  group_by(SRA_run_accession) %>% 
+  summarize(total_count = sum(count))
