@@ -169,6 +169,8 @@ process build_star_index {
 process star_mapping {
     tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping"
 
+    errorStrategy 'ignore' // ignore failed indexes to come back to later
+
     conda "envs/star_samtools.yml"
 
     input:
