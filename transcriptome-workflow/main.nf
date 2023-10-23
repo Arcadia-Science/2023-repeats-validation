@@ -4,6 +4,8 @@
 // Download RNAseq experiments from brain/muscle tissues and species genome/GTF files to map and quantify expression of genes
 // Assess the expression of repeat-expansion homologs identified in the species through protein sequence and structural comparison methods
 
+
+// outputs the count table for each mapping job and the GTF file for each genome
 nextflow.enable.dsl=2
 
 log.info """\
@@ -12,7 +14,6 @@ DOWNLOAD, MAP, AND PROCESS TRANSCRIPTOMES AGAINST SPECIES GENOMES
 TO QUANTIFY EXPRESSION OF SELECT GENES
 =========================================
 samples            : $params.samples
-proteins           : $params.proteins
 outdir             : $params.outdir
 threads            : $params.threads
 """
@@ -25,7 +26,6 @@ threads            : $params.threads
 sample_csv = Channel.fromPath(params.samples)
     .splitCsv(header:true)
 
-proteins_csv = Channel.fromPath(params.proteins)
 
 // split SRA accessions based on if library_layout is SINGLE or PAIRED
 // add the corresponding refseq_accession so carries through as a tuple
@@ -67,13 +67,15 @@ workflow {
 
     htseq_counts = htseq_count(htseq_input)
 
+    // parse GTF files to simple tsv
+    gtf_tables = parse_gtf(downloaded_gtf)
+
 }
 // download using SRA tools passing the SRA run accession
 // paired-end reads process to split files
 process download_paired_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
     errorStrategy 'ignore' // ignore failed downloads
 
@@ -96,7 +98,6 @@ process download_paired_SRA_runs {
 process download_single_SRA_runs {
     // download each SRA run with SRAtools
     tag "${SRA_run_accession}_download"
-    publishDir "${params.outdir}/sra_accessions", mode: 'copy', pattern:"*.fastq.gz"
 
     errorStrategy 'ignore' // ignore failed downloads
 
@@ -139,6 +140,7 @@ process download_refseq_files {
 // build STAR index with GTF file
 process build_star_index {
     tag "${genome_refseq_accession}_build_index"
+    label 'process_high'
     publishDir "${params.outdir}/index", mode: 'copy', pattern:"*"
 
     conda "envs/star.yml"
@@ -157,7 +159,8 @@ process build_star_index {
         --genomeFastaFiles ${genome_fasta} \\
         --sjdbGTFfile ${genome_gtf} \\
         --sjdbGTFtagExonParentTranscript mRNA \\
-        --sjdbOverhang 99
+        --sjdbOverhang 99 \\
+        --limitGenomeGenerateRAM=60000000000
     """
 
 }
@@ -165,7 +168,8 @@ process build_star_index {
 // map with STAR single end reads, index with samtools
 process star_mapping {
     tag "${genome_refseq_accession}-vs-${SRA_run_accession}_mapping"
-    publishDir "${params.outdir}/mapping", mode: 'copy', pattern:"*"
+
+    errorStrategy 'ignore' // ignore failed indexes to come back to later
 
     conda "envs/star_samtools.yml"
 
@@ -211,4 +215,21 @@ process htseq_count {
     htseq-count -f bam ${bam_file} ${genome_gtf} -r pos > ${genome_refseq_accession}_vs_${SRA_run_accession}.htseq
     """
 
+}
+
+// parse GTF files to TSV with gene_id : protein_id
+process parse_gtf {
+    tag "${genome_refseq_accession}_gtf_parse"
+    publishDir "${params.outdir}/gtf_tables", mode: 'copy', pattern:"*.tsv"
+
+    input:
+    tuple val(genome_refseq_accession), path(gtf)
+
+    output:
+    path("*.tsv"), emit: gtf_table
+
+    script:
+    """
+    python3 ${baseDir}/bin/parse-gtf-files.py ${gtf} ${genome_refseq_accession}_gtf_table.tsv
+    """
 }
