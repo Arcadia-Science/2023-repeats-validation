@@ -97,7 +97,7 @@ protein_accessions <- read.csv("metadata/2023-08-02-repeat-expansion-profiles.cs
 gtf_dir <- "transcriptome-workflow/results/gtf_tables/"
 gtf_files <- dir(gtf_dir, pattern = "*.tsv")
 
-# Custom function to read a file
+# Custom function to read tsvs
 read_gtf <- function(file_path) {
   data <- read_tsv(file_path, col_names = c("gene", "refseq_id"))
   return(data)
