@@ -40,7 +40,7 @@ counts_table_info <- left_join(all_counts_table, sra_accessions) %>%
   mutate(species_name = gsub("_", " ", species_name)) %>% 
   mutate(species_name = gsub("-", " ", species_name))
  
-# outlier removal prior to density plotting
+# outlier removal prior to density plotting to look at distribution of counts
 counts_table_info %>% 
   group_by(SRA_run_accession) %>% 
   mutate(IQR = IQR(count),
