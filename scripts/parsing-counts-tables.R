@@ -1,4 +1,6 @@
 library(tidyverse)
+library(viridisLite)
+library(ggpubr)
 
 ###########################################
 # Parse counts results and inspect homologs of interest
@@ -88,7 +90,7 @@ run_stats <- counts_table_info %>%
 protein_accessions <- read.csv("metadata/2023-08-02-repeat-expansion-profiles.csv") %>% 
   select(Common.Name, Accession, gene) %>% 
   mutate(refseq_id = Accession) %>% 
-  mutate(species_name = Common.Name) %>% 
+  mutate(species_name = gsub("-", " ", Common.Name)) %>% 
   select(-Accession, -Common.Name)
 
 # path for parsed gtf tables
@@ -132,3 +134,42 @@ homolog_count_table_stats <- left_join(homolog_count_table, run_stats) %>%
 ###########################################
 # Plotting
 ###########################################
+my_colors <- viridis(7)
+
+species_expression <- homolog_count_table_stats %>% 
+  select(species_name, gene, binary_count, tissue) %>% 
+  group_by(species_name, gene, tissue) %>% 
+  mutate(sum_count = factor(sum(binary_count))) %>% 
+  filter(species_name != "naked mole rat") %>% 
+  ggplot(aes(x=tissue, y=gene, fill=sum_count)) +
+  geom_tile(color="black") +
+  facet_wrap(~species_name, scales="free", nrow=1) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 80, hjust=1)) +
+  scale_y_discrete(expand=c(0,0)) +
+  scale_x_discrete(expand=c(0,0)) +
+  scale_fill_manual(values = my_colors, name = "Sum Count", breaks = 0:6, labels = as.character(0:6))
+
+naked_mole_rat_colors <- viridis(option="F", 30)
+nakedmolerat_expression <- homolog_count_table_stats %>% 
+  select(species_name, gene, binary_count, tissue) %>% 
+  group_by(species_name, gene, tissue) %>% 
+  mutate(sum_count = factor(sum(binary_count))) %>% 
+  filter(species_name == "naked mole rat") %>% 
+  ggplot(aes(x=tissue, y=gene, fill=sum_count)) +
+  geom_tile(color="black") +
+  facet_wrap(~species_name, scales="free", nrow=1) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 80, hjust=1)) +
+  scale_y_discrete(expand=c(0,0)) +
+  scale_x_discrete(expand=c(0,0)) +
+  scale_fill_manual(values = naked_mole_rat_colors, name = "Sum Count", breaks = 0:30, labels = as.character(0:30))
+
+# combine expression plots
+combined_plot <- ggarrange(species_expression, nakedmolerat_expression, ncol=1, heights = c(1.5,2))
+
+# save plots
+ggsave("figs/species-tissue-expression-plots.png", species_expression, width=11, height=8, units=c("in"))
+ggsave("figs/nakedmolerat-tissue-expression-plot.png", nakedmolerat_expression, width=11, height=8, units=c("in"))
+
+ggsave("figs/tissue-expression-plots.png", combined_plot, width=11, height=8, units=c("in"))
