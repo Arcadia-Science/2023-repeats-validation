@@ -140,7 +140,7 @@ process download_refseq_files {
 // build STAR index with GTF file
 process build_star_index {
     tag "${genome_refseq_accession}_build_index"
-    label 'process_high
+    label 'process_high'
 
     conda "envs/star.yml"
 
@@ -176,7 +176,7 @@ process star_mapping {
     tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
 
     output:
-    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*"), emit: mapping_file
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*.csi"), emit: mapping_file
 
     script:
     """
