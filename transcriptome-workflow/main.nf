@@ -177,7 +177,7 @@ process star_mapping {
     tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
 
     output:
-    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*.bai"), emit: mapping_file
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*"), emit: mapping_file
 
     script:
     """
@@ -193,7 +193,7 @@ process star_mapping {
          --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
          SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
 
-    samtools index ${genome_refseq_accession}_vs_${SRA_run_accession}Aligned.sortedByCoord.out.bam
+    samtools index -c ${genome_refseq_accession}_vs_${SRA_run_accession}Aligned.sortedByCoord.out.bam
     """
 }
 
