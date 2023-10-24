@@ -140,8 +140,7 @@ process download_refseq_files {
 // build STAR index with GTF file
 process build_star_index {
     tag "${genome_refseq_accession}_build_index"
-    label 'process_high'
-    publishDir "${params.outdir}/index", mode: 'copy', pattern:"*"
+    label 'process_high
 
     conda "envs/star.yml"
 

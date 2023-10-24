@@ -131,45 +131,28 @@ homolog_count_table <- left_join(counts_table_info, hit_accessions, by=c("specie
 homolog_count_table_stats <- left_join(homolog_count_table, run_stats) %>% 
   mutate(binary_count = ifelse(count < Median, 0, 1))
 
+# sample counts for each species and tissue type
+sample_counts <- counts_table_info %>% 
+  group_by(species_name, tissue) %>% 
+  summarize(n_total_samples = n_distinct(SRA_run_accession))
+
 ###########################################
 # Plotting
 ###########################################
-my_colors <- viridis(7)
-
-species_expression <- homolog_count_table_stats %>% 
+species_percent_samples_expression <- homolog_count_table_stats %>% 
   select(species_name, gene, binary_count, tissue) %>% 
+  left_join(sample_counts, by = c('species_name', 'tissue')) %>% 
   group_by(species_name, gene, tissue) %>% 
-  mutate(sum_count = factor(sum(binary_count))) %>% 
-  filter(species_name != "naked mole rat") %>% 
-  ggplot(aes(x=tissue, y=gene, fill=sum_count)) +
+  mutate(n_expressed_samples = sum(binary_count)) %>% 
+  mutate(percent_expressed = n_expressed_samples / n_total_samples) %>% 
+  ggplot(aes(x=tissue, y=gene, fill=percent_expressed)) +
   geom_tile(color="black") +
   facet_wrap(~species_name, scales="free", nrow=1) +
   theme_classic() +
-  theme(axis.text.x = element_text(angle = 80, hjust=1)) +
-  scale_y_discrete(expand=c(0,0)) +
+  theme(axis.text.x = element_text(angle = 80, hjust=1), legend.position = "bottom") +
   scale_x_discrete(expand=c(0,0)) +
-  scale_fill_manual(values = my_colors, name = "Sum Count", breaks = 0:6, labels = as.character(0:6))
-
-naked_mole_rat_colors <- viridis(option="F", 30)
-nakedmolerat_expression <- homolog_count_table_stats %>% 
-  select(species_name, gene, binary_count, tissue) %>% 
-  group_by(species_name, gene, tissue) %>% 
-  mutate(sum_count = factor(sum(binary_count))) %>% 
-  filter(species_name == "naked mole rat") %>% 
-  ggplot(aes(x=tissue, y=gene, fill=sum_count)) +
-  geom_tile(color="black") +
-  facet_wrap(~species_name, scales="free", nrow=1) +
-  theme_classic() +
-  theme(axis.text.x = element_text(angle = 80, hjust=1)) +
   scale_y_discrete(expand=c(0,0)) +
-  scale_x_discrete(expand=c(0,0)) +
-  scale_fill_manual(values = naked_mole_rat_colors, name = "Sum Count", breaks = 0:30, labels = as.character(0:30))
-
-# combine expression plots
-combined_plot <- ggarrange(species_expression, nakedmolerat_expression, ncol=1, heights = c(1.5,2))
+  scale_fill_viridis_c()
 
 # save plots
-ggsave("figs/species-tissue-expression-plots.png", species_expression, width=11, height=8, units=c("in"))
-ggsave("figs/nakedmolerat-tissue-expression-plot.png", nakedmolerat_expression, width=11, height=8, units=c("in"))
-
-ggsave("figs/tissue-expression-plots.png", combined_plot, width=11, height=8, units=c("in"))
+ggsave("figs/species-tissue-expression-plots.png", species_percent_samples_expression, width=11, height=8, units=c("in"))
