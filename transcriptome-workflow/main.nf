@@ -186,11 +186,11 @@ process star_mapping {
         --readFilesCommand zcat \\
         --outFilterType BySJout \\
         --outFilterMultimapNmax 20 --alignSJoverhangMin 8    \\
-         --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
-         --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
-         --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
-         --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
-         SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
+        --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
+        --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
+        --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
+        --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
+        SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
 
     samtools index -c ${genome_refseq_accession}_vs_${SRA_run_accession}Aligned.sortedByCoord.out.bam
     """
