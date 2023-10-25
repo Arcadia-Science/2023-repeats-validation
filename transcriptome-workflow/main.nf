@@ -141,7 +141,6 @@ process download_refseq_files {
 process build_star_index {
     tag "${genome_refseq_accession}_build_index"
     label 'process_high'
-    publishDir "${params.outdir}/index", mode: 'copy', pattern:"*"
 
     conda "envs/star.yml"
 
@@ -177,7 +176,7 @@ process star_mapping {
     tuple val(genome_refseq_accession), val(SRA_run_accession), path(reads), path(index)
 
     output:
-    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*.bai"), emit: mapping_file
+    tuple val(genome_refseq_accession), val(SRA_run_accession), path("*.bam"), path("*.csi"), emit: mapping_file
 
     script:
     """
@@ -187,13 +186,13 @@ process star_mapping {
         --readFilesCommand zcat \\
         --outFilterType BySJout \\
         --outFilterMultimapNmax 20 --alignSJoverhangMin 8    \\
-         --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
-         --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
-         --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
-         --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
-         SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
+        --alignSJDBoverhangMin 1 --outFilterMismatchNmax 999 \\
+        --outFilterMismatchNoverLmax 0.6 --alignIntronMin 20 \\
+        --alignIntronMax 1000000 --alignMatesGapMax 1000000  \\
+        --outSAMattributes NH HI NM MD --outSAMtype BAM      \\
+        SortedByCoordinate --outFileNamePrefix ${genome_refseq_accession}_vs_${SRA_run_accession}
 
-    samtools index ${genome_refseq_accession}_vs_${SRA_run_accession}Aligned.sortedByCoord.out.bam
+    samtools index -c ${genome_refseq_accession}_vs_${SRA_run_accession}Aligned.sortedByCoord.out.bam
     """
 }
 
