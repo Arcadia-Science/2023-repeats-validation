@@ -154,7 +154,14 @@ species_percent_samples_expression <- homolog_count_table_stats %>%
   scale_y_discrete(expand=c(0,0)) +
   scale_fill_viridis_c()
 
-species_percent_samples_expression
+# write table to csv
+species_expression_table <- species_percent_samples_expression <- homolog_count_table_stats %>% 
+  left_join(sample_counts, by = c('species_name', 'tissue')) %>% 
+  group_by(species_name, gene, tissue) %>% 
+  mutate(n_expressed_samples = sum(binary_count)) %>% 
+  mutate(percent_expressed = n_expressed_samples / n_total_samples)
 
-# save plots
+write.csv(species_expression_table, "results/species-expression-counts-stats.csv", row.names = FALSE, quote = FALSE)
+
+# save plot
 ggsave("figs/all-species-tissue-expression-plots.png", species_percent_samples_expression, width=11, height=8, units=c("in"))
