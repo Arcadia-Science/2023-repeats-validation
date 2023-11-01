@@ -11,7 +11,7 @@ library(ggpubr)
 ###########################################
 
 # paths
-counts_dir <- "transcriptome-workflow/results/counts/"
+counts_dir <- "transcriptome-workflow/results/v2/counts/"
 files <- dir(counts_dir, pattern = "*.htseq")
 
 # Custom function to read a file
@@ -94,7 +94,7 @@ protein_accessions <- read.csv("metadata/2023-08-02-repeat-expansion-profiles.cs
   select(-Accession, -Common.Name)
 
 # path for parsed gtf tables
-gtf_dir <- "transcriptome-workflow/results/gtf_tables/"
+gtf_dir <- "transcriptome-workflow/results/v2/gtf_tables/"
 gtf_files <- dir(gtf_dir, pattern = "*.tsv")
 
 # Custom function to read tsvs
@@ -147,12 +147,21 @@ species_percent_samples_expression <- homolog_count_table_stats %>%
   mutate(percent_expressed = n_expressed_samples / n_total_samples) %>% 
   ggplot(aes(x=tissue, y=gene, fill=percent_expressed)) +
   geom_tile(color="black") +
-  facet_wrap(~species_name, scales="free", nrow=1) +
+  facet_wrap(~species_name, scales="free", nrow=2) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 80, hjust=1), legend.position = "bottom") +
   scale_x_discrete(expand=c(0,0)) +
   scale_y_discrete(expand=c(0,0)) +
   scale_fill_viridis_c()
 
-# save plots
-ggsave("figs/species-tissue-expression-plots.png", species_percent_samples_expression, width=11, height=8, units=c("in"))
+# write table to csv
+species_expression_table <- species_percent_samples_expression <- homolog_count_table_stats %>% 
+  left_join(sample_counts, by = c('species_name', 'tissue')) %>% 
+  group_by(species_name, gene, tissue) %>% 
+  mutate(n_expressed_samples = sum(binary_count)) %>% 
+  mutate(percent_expressed = n_expressed_samples / n_total_samples)
+
+write.csv(species_expression_table, "results/species-expression-counts-stats.csv", row.names = FALSE, quote = FALSE)
+
+# save plot
+ggsave("figs/all-species-tissue-expression-plots.png", species_percent_samples_expression, width=11, height=8, units=c("in"))
