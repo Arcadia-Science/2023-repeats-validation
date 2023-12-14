@@ -1,6 +1,8 @@
 library(tidyverse)
 library(viridisLite)
 library(ggpubr)
+library(stringr)
+library(stringi)
 
 ###########################################
 # Parse counts results and inspect homologs of interest
@@ -139,20 +141,38 @@ sample_counts <- counts_table_info %>%
 ###########################################
 # Plotting
 ###########################################
+
+# Arcadia color scheme
+black <- "#09090A"
+grape <- "#5A4596"
+taffy <- "#E87485"
+tangerine <- "#FFB984"
+oat <- "#F5E4BE"
+
+magma_colors <- c(black, grape, taffy, tangerine, oat)
+
+magma_gradient <- colorRampPalette(magma_colors)
+
+gradient_100 <- magma_gradient(100)
+
 species_percent_samples_expression <- homolog_count_table_stats %>% 
   select(species_name, gene, binary_count, tissue) %>% 
   left_join(sample_counts, by = c('species_name', 'tissue')) %>% 
-  group_by(species_name, gene, tissue) %>% 
+  mutate(species_upper = stri_trans_totitle(species_name, opts_brkiter = stri_opts_brkiter(type="sentence"))) %>% 
+  mutate(tissue_upper = stri_trans_totitle(tissue, opts_brkiter = stri_opts_brkiter(type="sentence"))) %>% 
+  group_by(species_upper, gene, tissue_upper) %>% 
   mutate(n_expressed_samples = sum(binary_count)) %>% 
   mutate(percent_expressed = n_expressed_samples / n_total_samples) %>% 
-  ggplot(aes(x=tissue, y=gene, fill=percent_expressed)) +
-  geom_tile(color="black") +
-  facet_wrap(~species_name, scales="free", nrow=2) +
-  theme_classic() +
-  theme(axis.text.x = element_text(angle = 80, hjust=1), legend.position = "bottom") +
+  ggplot(aes(x=tissue_upper, y=gene, fill=percent_expressed)) +
+  geom_tile(color="white", linewidth=0.5) +
+  facet_wrap(~species_upper, scales="free", nrow=2) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 80, hjust=1), legend.position = "bottom", axis.title.x=element_blank(), axis.title.y=element_blank()) +
   scale_x_discrete(expand=c(0,0)) +
   scale_y_discrete(expand=c(0,0)) +
-  scale_fill_viridis_c()
+  scale_fill_gradientn(colors=magma_gradient(100), name = "Percent Expressed")
+
+species_percent_samples_expression
 
 # write table to csv
 species_expression_table <- species_percent_samples_expression <- homolog_count_table_stats %>% 
@@ -165,3 +185,4 @@ write.csv(species_expression_table, "results/species-expression-counts-stats.csv
 
 # save plot
 ggsave("figs/all-species-tissue-expression-plots.png", species_percent_samples_expression, width=11, height=8, units=c("in"))
+ggsave("figs/all-species-tissue-expression-plots.jpg", species_percent_samples_expression, width=11, height=8, units=c("in"))
