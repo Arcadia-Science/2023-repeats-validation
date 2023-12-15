@@ -13,7 +13,7 @@ library(stringi)
 ###########################################
 
 # paths
-counts_dir <- "transcriptome-workflow/results/v2/counts/"
+counts_dir <- "transcriptome-workflow/results/counts/"
 files <- dir(counts_dir, pattern = "*.htseq")
 
 # Custom function to read a file
@@ -96,7 +96,7 @@ protein_accessions <- read.csv("metadata/2023-08-02-repeat-expansion-profiles.cs
   select(-Accession, -Common.Name)
 
 # path for parsed gtf tables
-gtf_dir <- "transcriptome-workflow/results/v2/gtf_tables/"
+gtf_dir <- "transcriptome-workflow/results/gtf_tables/"
 gtf_files <- dir(gtf_dir, pattern = "*.tsv")
 
 # Custom function to read tsvs
