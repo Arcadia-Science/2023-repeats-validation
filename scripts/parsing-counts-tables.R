@@ -186,3 +186,4 @@ write.csv(species_expression_table, "results/species-expression-counts-stats.csv
 # save plot
 ggsave("figs/all-species-tissue-expression-plots.png", species_percent_samples_expression, width=11, height=8, units=c("in"))
 ggsave("figs/all-species-tissue-expression-plots.jpg", species_percent_samples_expression, width=11, height=8, units=c("in"))
+ggsave("figs/all-species-tissue-expression-plots.pdf", species_percent_samples_expression, width=11, height=8, units=c("in"))
